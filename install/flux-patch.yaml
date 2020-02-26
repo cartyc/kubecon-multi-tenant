@@ -16,4 +16,4 @@ spec:
             - --ssh-keygen-dir=/var/fluxd/keygen
             - --git-branch=master
             - --git-path=cluster
-            - --git-url=git@github.com:org/dev-cluster
+            - --git-url=git@github.com:cartyc/kubecon-multi-tenant.git
