@@ -1,3 +1,4 @@
 bases:
-  - ./common/
-  - ./team1/
+  - ./gatekeeper/
+  - ./demo-app/
+  - ./falco/

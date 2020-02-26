@@ -1,4 +1,4 @@
-namespace: gatekeeper
+namespace: falco
 resources:
   - namespace.yaml
   - rbac.yaml
