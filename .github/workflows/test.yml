@@ -17,7 +17,5 @@ jobs:
             echo "Validating cluster/gatekeeper"
             kustomize build cluster/gatekeeper | kubeval --strict --ignore-missing-schemas
       - name: Deny latest container image tags
-        uses: docker://macintoshprime/kubectl:v1.17
-        with:
-          command: |
+        run: |
             kustomize build cluster | conftest test -p .github/policy -
