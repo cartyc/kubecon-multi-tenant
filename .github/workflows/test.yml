@@ -7,15 +7,16 @@ jobs:
       - uses: actions/checkout@v1
       - name: Validate kustomization
         uses: macintoshprime/kubectl@v1.17
-        command: |
-          echo "Validating install"
-          kustomize build install | kubeval --strict --ignore-missing-schemas
-          echo "Validating cluster"
-          kustomize build cluster | kubeval --strict --ignore-missing-schemas
-          echo "Validating cluster/flagger"
-          kustomize build cluster/flagger | kubeval --strict --ignore-missing-schemas
-          echo "Validating cluster/gatekeeper"
-          kustomize build cluster/gatekeeper | kubeval --strict --ignore-missing-schemas
+        with:
+          command: |
+            echo "Validating install"
+            kustomize build install | kubeval --strict --ignore-missing-schemas
+            echo "Validating cluster"
+            kustomize build cluster | kubeval --strict --ignore-missing-schemas
+            echo "Validating cluster/flagger"
+            kustomize build cluster/flagger | kubeval --strict --ignore-missing-schemas
+            echo "Validating cluster/gatekeeper"
+            kustomize build cluster/gatekeeper | kubeval --strict --ignore-missing-schemas
       - name: Deny latest container image tags
         uses: macintoshprime/kubectl@v1.17
         with:
