@@ -3,12 +3,11 @@ name: test
 jobs:
   validate:
     runs-on: ubuntu-latest
+    container: macintoshprime/kubectl:v1.17
     steps:
       - uses: actions/checkout@v1
       - name: Validate kustomization
-        uses: cartyc/kubectl@master
-        with:
-          command: |
+        run: |
             echo "Validating install"
             kustomize build install | kubeval --strict --ignore-missing-schemas
             echo "Validating cluster"
@@ -18,7 +17,7 @@ jobs:
             echo "Validating cluster/gatekeeper"
             kustomize build cluster/gatekeeper | kubeval --strict --ignore-missing-schemas
       - name: Deny latest container image tags
-        uses: cartyc/kubectl@master
+        uses: docker://macintoshprime/kubectl:v1.17
         with:
           command: |
             kustomize build cluster | conftest test -p .github/policy -
