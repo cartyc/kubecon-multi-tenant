@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Validate kustomization
-        uses: docker://macintoshprime/kubectl:v1.17
+        uses: macintoshprime/kubectl@master
         with:
           command: |
             echo "Validating install"
@@ -18,7 +18,7 @@ jobs:
             echo "Validating cluster/gatekeeper"
             kustomize build cluster/gatekeeper | kubeval --strict --ignore-missing-schemas
       - name: Deny latest container image tags
-        uses: docker://macintoshprime/kubectl:v1.17
+        uses: macintoshprime/kubectl@master
         with:
           command: |
             kustomize build cluster | conftest test -p .github/policy -
