@@ -16,7 +16,7 @@ spec:
             - --ssh-keygen-dir=/var/fluxd/keygen
             - --k8s-allow-namespace=demo-app
             - --git-url=git@github.com:cartyc/hello-k8s-deployment.git
-            - --git-branch=master
+            - --git-branch=dev
             - --git-path=deploy
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1

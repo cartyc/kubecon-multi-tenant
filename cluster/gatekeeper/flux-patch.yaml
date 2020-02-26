@@ -16,7 +16,7 @@ spec:
             - --ssh-keygen-dir=/var/fluxd/keygen
             - --k8s-allow-namespace=gatekeeper
             - --git-url=git@github.com:cartyc/kubecon-gatekeeper.git
-            - --git-branch=master
+            - --git-branch=dev
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: RoleBinding
