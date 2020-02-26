@@ -18,6 +18,7 @@ jobs:
     - name: Run some sanity checks
       # kubectl is already installed on the Github Ubuntu worker
       run: |
+        kubectl apply -k ./install/
         kubectl get nodes -o wide
         kubectl get pods --all-namespaces -o wide
         kubectl get services --all-namespaces -o wide
