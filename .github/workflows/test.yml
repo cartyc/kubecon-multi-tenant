@@ -18,4 +18,5 @@ jobs:
             kustomize build cluster/gatekeeper | kubeval --strict --ignore-missing-schemas
       - name: Deny latest container image tags
         run: |
-            kustomize build cluster | conftest test -p .github/policy -
+            conftest pull git@github.com:cartyc/kubecon-policies.git
+            kustomize build cluster | conftest test -p policy -
