@@ -1,11 +1,23 @@
 apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRole
+metadata:
+  name: gatekeeper
+rules:
+  - apiGroups:
+    - '*'
+  - resource:
+    - '*'
+  - verbs:
+    - '*'
+---
+apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
 metadata:
   name: flux-gatekeeper
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: flux-readonly
+  name: flux
 subjects:
   - kind: ServiceAccount
     name: flux
