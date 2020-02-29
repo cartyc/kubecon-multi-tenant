@@ -5,6 +5,7 @@ metadata:
 spec:
   template:
     spec:
+
       containers:
         - name: flux
           args:
@@ -14,7 +15,7 @@ spec:
             - --git-poll-interval=2m
             - --sync-interval=5m
             - --ssh-keygen-dir=/var/fluxd/keygen
-            - --k8s-allow-namespace=gatekeeper
+            - --k8s-allow-namespace=gatekeeper-system
             - --git-url=git@github.com:cartyc/kubecon-gatekeeper.git
             - --git-branch=master
 ---
