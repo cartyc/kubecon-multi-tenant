@@ -11,8 +11,8 @@ spec:
             - --manifest-generation=true
             - --memcached-hostname=flux-memcached.flux-system
             - --memcached-service=
-            - --git-poll-interval=5m
-            - --sync-interval=5m
+            - --git-poll-interval=2m
+            - --sync-interval=2m
             - --ssh-keygen-dir=/var/fluxd/keygen
             - --git-branch=master
             - --git-path=cluster
