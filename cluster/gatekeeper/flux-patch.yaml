@@ -25,4 +25,4 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: flux
-    namespace: gatekeeper
+    namespace: gatekeeper-system

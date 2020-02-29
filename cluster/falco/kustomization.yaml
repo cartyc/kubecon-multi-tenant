@@ -1,4 +1,4 @@
-namespace: falco
+namespace: falco-system
 resources:
   - namespace.yaml
   - rbac.yaml

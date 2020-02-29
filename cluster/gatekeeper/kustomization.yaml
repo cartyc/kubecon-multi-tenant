@@ -1,4 +1,4 @@
-namespace: gatekeeper
+namespace: gatekeeper-system
 resources:
   - namespace.yaml
   - rbac.yaml

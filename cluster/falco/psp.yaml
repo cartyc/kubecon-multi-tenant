@@ -49,4 +49,4 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: default
-    namespace: falco
+    namespace: falco-system
