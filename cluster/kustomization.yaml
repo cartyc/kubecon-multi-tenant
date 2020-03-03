@@ -3,3 +3,4 @@ bases:
   - ./demo-app/
   - ./falco/
   - ./linkerd/
+  - ./cert-manager
