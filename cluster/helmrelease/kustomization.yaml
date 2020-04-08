@@ -1,5 +1,6 @@
 bases:
 - github.com/fluxcd/helm-operator//deploy
+namespace: flux-system
 patchesJSON6902:
 - target:
     group: apps
