@@ -1,0 +1,6 @@
+resources:
+- crd.yml
+- elasticsearch.yaml
+- filebeat.yaml
+- kibana.yaml
+- namespace.yaml
