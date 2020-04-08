@@ -4,3 +4,4 @@ bases:
   - ./falco/
   - ./linkerd/
   - ./cert-manager
+  - ./helm-release
