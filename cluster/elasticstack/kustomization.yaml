@@ -1,5 +1,5 @@
 resources:
-- crd.yml
+- crd.yaml
 - elasticsearch.yaml
 - filebeat.yaml
 - kibana.yaml
