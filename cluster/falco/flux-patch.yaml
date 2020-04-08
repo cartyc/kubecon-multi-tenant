@@ -17,6 +17,7 @@ spec:
             - --k8s-allow-namespace=falco
             - --git-url=git@github.com:org/dev-falco
             - --git-branch=master
+            - --git-readonly
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: RoleBinding
