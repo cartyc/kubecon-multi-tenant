@@ -6,7 +6,7 @@ patchesJSON6902:
     version: v1
     kind: Deployment
     name: helm-operator
-    namespace: flux
+    namespace: flux-system
   patch: |-
     - op: replace
       path: /spec/template/spec/containers/0/args
