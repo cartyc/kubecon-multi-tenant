@@ -15,7 +15,7 @@ spec:
             - --sync-interval=5m
             - --ssh-keygen-dir=/var/fluxd/keygen
             - --k8s-allow-namespace=falco
-            - --git-url=git@github.com:org/dev-falco
+            - --git-url=git@github.com:cartyc/falco-helm.git
             - --git-branch=master
             - --git-readonly
 ---
