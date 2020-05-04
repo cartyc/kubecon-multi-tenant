@@ -1,10 +1,13 @@
 #!/bin/bash
 
-kind create cluster --name master
+# kind create cluster --name master
 kubectl apply -k $(pwd)/install/
 kubectl delete -n flux-system secret flux-git-deploy
+
 kubectl create secret generic flux-git-deploy --from-file=identity=$HOME/.ssh/fluxcd -n flux-system
-echo "/n"
+kubectl rollout restart deploy flux -n flux-system
+
+echo "\n"
 
 
 # # QA
@@ -27,10 +30,7 @@ kubectl create secret generic flux-git-deploy --from-file=identity=$HOME/.ssh/fl
 kubectx
 
 
-## Useful Commands
+# kubectx
 
-# GateKeeper 
-# {
-#     kubectl delete -n gatekeeper secret flux-git-deploy
-#     kubectl create secret generic flux-git-deploy --from-file=identity=/Users/work/.ssh/gatekeeper -n gatekeeper
-# }
+
+## Useful Commands
