@@ -17,3 +17,4 @@ spec:
             - --git-branch=master
             - --git-path=cluster
             - --git-url=git@github.com:cartyc/kubecon-multi-tenant.git
+            - --sync-garbage-collection
