@@ -29,7 +29,7 @@ spec:
             medium: Memory
       containers:
         - name: flux
-          image: fluxcd/flux:1.15.0
+          image: fluxcd/flux:1.19.0
           imagePullPolicy: IfNotPresent
           ports:
             - name: http

@@ -2,7 +2,5 @@ bases:
   - ./gatekeeper/
   - ./demo-app/
   - ./falco/
-  - ./linkerd/
-  - ./cert-manager
   - ./helmrelease
   # - ./elasticstack
