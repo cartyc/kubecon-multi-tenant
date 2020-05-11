@@ -18,6 +18,8 @@ jobs:
             kustomize build cluster/gatekeeper | kubeval --strict --ignore-missing-schemas
       - name: Deny latest container image tags
         run: |
+            pwd
+            cd /kubeknife
             mkdir policy
             git clone https://github.com/cartyc/opa-policies.git policy
             kustomize build cluster | conftest test -p policy -
