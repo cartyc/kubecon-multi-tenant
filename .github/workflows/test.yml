@@ -3,7 +3,7 @@ name: test
 jobs:
   validate:
     runs-on: ubuntu-latest
-    container: macintoshprime/kubectl:v1.17
+    container: macintoshprime/kubectl:v1.17-git
     steps:
       - uses: actions/checkout@v1
       - name: Validate kustomization
