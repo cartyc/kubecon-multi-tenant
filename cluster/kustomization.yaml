@@ -3,4 +3,5 @@ bases:
   - ./demo-app/
   - ./falco/
   - ./helmrelease
-  # - ./elasticstack
+  # - ./elasticstack  
+  - ./policy/
