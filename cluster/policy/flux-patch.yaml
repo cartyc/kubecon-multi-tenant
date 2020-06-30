@@ -16,7 +16,7 @@ spec:
             - --ssh-keygen-dir=/var/fluxd/keygen
             - --k8s-allow-namespace=policy
             - --git-url=git@github.com:cartyc/opa-policies.git
-            - --git-branch=master
+            - --git-branch=main
             - --git-readonly
             - --registry-disable-scanning
 ---

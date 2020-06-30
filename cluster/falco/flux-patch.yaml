@@ -16,7 +16,7 @@ spec:
             - --ssh-keygen-dir=/var/fluxd/keygen
             - --k8s-allow-namespace=falco-system
             - --git-url=git@github.com:cartyc/falco-helm.git
-            - --git-branch=master
+            - --git-branch=main
             - --git-readonly
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1

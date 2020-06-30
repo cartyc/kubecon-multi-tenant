@@ -16,7 +16,7 @@ spec:
             - --ssh-keygen-dir=/var/fluxd/keygen
             - --k8s-allow-namespace=team1
             - --git-url=git@github.com:org/dev-team1
-            - --git-branch=master
+            - --git-branch=main
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: RoleBinding
