@@ -14,7 +14,7 @@ spec:
             - --git-poll-interval=2m
             - --sync-interval=2m
             - --ssh-keygen-dir=/var/fluxd/keygen
-            - --git-branch=master
+            - --git-branch=main
             - --git-path=cluster
             - --git-url=git@github.com:cartyc/kubecon-multi-tenant.git
             - --sync-garbage-collection
